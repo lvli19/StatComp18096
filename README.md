@@ -71,15 +71,20 @@ jackafterboot <- function(data,func=NULL,B){
 }
 ```
 
-In order to empirically compare _boot_ , _jack_ and _jackafterboot_, one generates 1,000 repicates of beta(2,3) * 20, and save it in data{StatComp}. To load the file, one simply calls _data(number-data)_. The R code for comparing the three functions is as follows.
+In order to empirically compare _boot_ , _jack_ and _jackafterboot_, one generates 1,000 random numbers. The R code for comparing the three functions is as follows.
 
 ```{r,eval=TRUE}
 library(StatComp18096)
-data = data(number_data)
-attach(data)
-boot <- boot(data = data, B = 200, func = median)$se.b
-jack <- jack(data = data, func = median)
-jackafterboot<- jackafterboot(data, B = 200, func = median)
-#knitr::kable(boot,jack,jackafterboot)
+data(aircondit,package = "boot")
+air <- aircondit$hours
+boot(data = air, func = mean, B = 2000)
+jack(data = air, func = mean)
+jackafterboot(data, B = 200, func = mean)
 ```
+And you change the function and data, as is shown in the example, the standard error computed by jackknife-after-bootstrap is the lowest.
 
+## The method to download the package
+```{r,eval=TRUE}
+install.packages("devtools")
+devtools::install_github("lvli19/StatComp18096")
+```
