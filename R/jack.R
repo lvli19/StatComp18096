@@ -5,9 +5,8 @@
 #' @return the standard error to be estimated
 #' @examples
 #' \dontrun{
-#' data(aircondit,package = "boot")
-#' air <- aircondit$hours
-#' jack(data = air, func = mean)
+#' data <- 20 * rbeta(1000,2,3)
+#' jack(data = data, func = mean)
 #' }
 #' @export
 jack <- function(data,func=NULL){

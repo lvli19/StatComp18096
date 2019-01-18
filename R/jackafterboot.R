@@ -6,9 +6,8 @@
 #' @return the standard error of both bootstrap method and jackknife-after-bootstrap method
 #' @examples
 #' \dontrun{
-#' data(aircondit,package = "boot")
-#' air <- aircondit$hours
-#' jackafterboot(data = air, func=mean, B = 2000)
+#' data <- 20 * rbeta(1000,2,3)
+#' jackafterboot(data = data, func=mean, B = 2000)
 #' }
 #' @export
 jackafterboot <- function(data, func=NULL, B){

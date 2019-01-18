@@ -21,8 +21,7 @@ Estimate the standard error and the bias of an estimator using R
 }
 \examples{
 \dontrun{
-data(aircondit,package = "boot")
-air <- aircondit$hours
-boot(data = air, func = mean, B = 2000)
+data <- 20 * rbeta(1000,2,3)
+boot(data = data, func = mean, B = 2000)
 }
 }

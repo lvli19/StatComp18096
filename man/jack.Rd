@@ -19,8 +19,7 @@ Compute the jackknife estimate of standard error using R
 }
 \examples{
 \dontrun{
-data(aircondit,package = "boot")
-air <- aircondit$hours
-jack(data = air, func = mean)
+data <- 20 * rbeta(1000,2,3)
+jack(data = data, func = mean)
 }
 }

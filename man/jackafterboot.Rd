@@ -21,8 +21,7 @@ Computes an estimate for each leave-one-out sample using R
 }
 \examples{
 \dontrun{
-data(aircondit,package = "boot")
-air <- aircondit$hours
-jackafterboot(data = air, func=mean, B = 2000)
+data <- 20 * rbeta(1000,2,3)
+jackafterboot(data = data, func=mean, B = 2000)
 }
 }
