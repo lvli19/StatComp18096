@@ -1,0 +1,16 @@
+Package: StatComp18096
+Type: Package
+Title: Three functions in statscomp
+Version: 0.1.0
+Date: 2019-01-11
+Author: Lvli
+Maintainer: Lvli <Lyuli@mail.ustc.edu.cn>
+Description: The package is a collection of three functions about resampling method.They are bootstrap, jackknife and jackknife-after-bootstrap methods respectively.
+License: GPL (>= 2)
+Imports: microbenchmark, knitr, rmarkdown, MASS, RANN, Ball, boot, bootstrap, devtools, energy, parallel
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+VignetteBuilder: knitr
+URL: http://github.com/lvli19/StatComp18096
+BugReports: http://github.com/lvli19/StatComp18096/issues
