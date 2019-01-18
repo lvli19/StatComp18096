@@ -1569,9 +1569,9 @@ M &lt;-<span class="st"> </span><span class="kw">as.table</span>(<span class="kw
   <span class="kw">chisq.test</span>(M)
 ))</code></pre></div>
 <pre><code>## Unit: microseconds
-##           expr     min       lq     mean  median       uq     max neval
-##  chisq_test(M)  60.761  66.0980  82.3110  72.462  89.2940 209.789   100
-##  chisq.test(M) 125.217 139.5865 189.4636 149.234 222.3115 727.489   100</code></pre>
+##           expr     min      lq     mean   median       uq      max neval
+##  chisq_test(M)  61.993  66.509 126.0999  75.7465  86.4205 1795.731   100
+##  chisq.test(M) 124.396 136.507 212.8854 145.3340 177.3565 1727.170   100</code></pre>
 <p><strong><em>Conclusion</em></strong></p>
 <p>We can say that calling <em>chisq_test()</em> quite a bit faster than calling <em>chisq.test()</em> for two numeric vectors with no missing values.</p>
 </div>
@@ -1625,9 +1625,9 @@ tab2 &lt;-<span class="st"> </span><span class="kw">with</span>(data,<span class
 ## [1] 0.03912271</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">microbenchmark<span class="op">::</span><span class="kw">microbenchmark</span>(<span class="kw">chisq_test</span>(tab1), <span class="kw">chisq_test</span>(tab2))</code></pre></div>
 <pre><code>## Unit: microseconds
-##              expr    min     lq      mean  median      uq     max neval
-##  chisq_test(tab1) 78.004 82.110  97.30421 83.7520 85.5995 536.585   100
-##  chisq_test(tab2) 78.004 81.288 100.42847 82.5205 85.1890 608.841   100</code></pre>
+##              expr    min      lq      mean median     uq     max neval
+##  chisq_test(tab1) 78.005 80.4670 115.35593 82.726 85.804 957.806   100
+##  chisq_test(tab2) 77.183 79.6465  98.94642 82.109 84.368 547.259   100</code></pre>
 <p><strong><em>Conclusion</em></strong></p>
 <p>We can use it to speed up your chi-square test, but not very efficeient.</p>
 </div>
