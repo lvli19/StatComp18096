@@ -1536,7 +1536,7 @@ Plot and compare with the theorial value.
 <bra/><bra/><bra/>
 
 **The code and the result is shown as below:**
-```{r,eval=FALSE}
+```{r, eval=FALSE}
 # Cauchy distribution density function
 f <- function(x, theta,eta) {
   stopifnot(theta > 0)
@@ -1559,8 +1559,8 @@ for (i in 2:m) {
     x[i] <- xt
     k <- k+1     #y is rejected
   }
-}
 print(k)
+}
 ```
 **In this exercise, approximately 20% of the candidate points are rejected, so the chain is somewhat not bad, but can be better.**
 

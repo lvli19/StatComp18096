@@ -1188,8 +1188,8 @@ u &lt;-<span class="st"> </span><span class="kw">runif</span>(m)
     x[i] &lt;-<span class="st"> </span>xt
     k &lt;-<span class="st"> </span>k<span class="op">+</span><span class="dv">1</span>     <span class="co">#y is rejected</span>
   }
-}
-<span class="kw">print</span>(k)</code></pre></div>
+<span class="kw">print</span>(k)
+}</code></pre></div>
 <p><strong>In this exercise, approximately 20% of the candidate points are rejected, so the chain is somewhat not bad, but can be better.</strong></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span>m, x, <span class="dt">type=</span><span class="st">&quot;l&quot;</span>, <span class="dt">main=</span><span class="st">&quot;&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;x&quot;</span>)
 
@@ -1569,9 +1569,9 @@ M &lt;-<span class="st"> </span><span class="kw">as.table</span>(<span class="kw
   <span class="kw">chisq.test</span>(M)
 ))</code></pre></div>
 <pre><code>## Unit: microseconds
-##           expr     min      lq      mean  median      uq     max neval
-##  chisq_test(M)  62.404  66.304  88.19041  72.668  79.442 778.810   100
-##  chisq.test(M) 128.092 134.660 156.14030 140.819 147.387 440.519   100</code></pre>
+##           expr     min       lq     mean  median       uq     max neval
+##  chisq_test(M)  60.761  66.0980  82.3110  72.462  89.2940 209.789   100
+##  chisq.test(M) 125.217 139.5865 189.4636 149.234 222.3115 727.489   100</code></pre>
 <p><strong><em>Conclusion</em></strong></p>
 <p>We can say that calling <em>chisq_test()</em> quite a bit faster than calling <em>chisq.test()</em> for two numeric vectors with no missing values.</p>
 </div>
@@ -1625,9 +1625,9 @@ tab2 &lt;-<span class="st"> </span><span class="kw">with</span>(data,<span class
 ## [1] 0.03912271</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">microbenchmark<span class="op">::</span><span class="kw">microbenchmark</span>(<span class="kw">chisq_test</span>(tab1), <span class="kw">chisq_test</span>(tab2))</code></pre></div>
 <pre><code>## Unit: microseconds
-##              expr    min     lq     mean median      uq     max neval
-##  chisq_test(tab1) 75.952 78.415 85.99398 80.263 84.9840 195.832   100
-##  chisq_test(tab2) 75.952 78.415 91.97980 80.878 83.3415 605.969   100</code></pre>
+##              expr    min     lq      mean  median      uq     max neval
+##  chisq_test(tab1) 78.004 82.110  97.30421 83.7520 85.5995 536.585   100
+##  chisq_test(tab2) 78.004 81.288 100.42847 82.5205 85.1890 608.841   100</code></pre>
 <p><strong><em>Conclusion</em></strong></p>
 <p>We can use it to speed up your chi-square test, but not very efficeient.</p>
 </div>

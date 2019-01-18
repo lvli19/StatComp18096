@@ -875,7 +875,7 @@ p
 #  pow <- colMeans(p.values<alpha)
 #  pow
 
-## ----eval=FALSE----------------------------------------------------------
+## ---- eval=FALSE---------------------------------------------------------
 #  # Cauchy distribution density function
 #  f <- function(x, theta,eta) {
 #    stopifnot(theta > 0)
@@ -898,8 +898,8 @@ p
 #      x[i] <- xt
 #      k <- k+1     #y is rejected
 #    }
-#  }
 #  print(k)
+#  }
 
 ## ----eval=FALSE----------------------------------------------------------
 #  plot(1:m, x, type="l", main="", ylab="x")
